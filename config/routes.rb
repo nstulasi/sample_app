@@ -1,7 +1,9 @@
 SampleApp::Application.routes.draw do
-  get "pages/home"
+  get "pages/home" #automatically maps the URL pages/home to the action home in the Pages controller
 
   get "pages/contact"
+  
+  get "pages/about"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
