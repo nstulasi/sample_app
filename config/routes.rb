@@ -1,9 +1,16 @@
 SampleApp::Application.routes.draw do
-  get "pages/home" #automatically maps the URL pages/home to the action home in the Pages controller
+  get "users/new"
 
-  get "pages/contact"
+  #get "pages/home" #automatically maps the URL pages/home to the action home in the Pages controller
+
+  #get "pages/contact"
   
-  get "pages/about"
+  #get "pages/about"
+  match '/contact', :to => 'pages#contact'
+  match '/about', :to => 'pages#about'
+  match '/help', :to => 'pages#help'
+  match '/signup', :to => 'users#new'
+  root :to => 'pages#home'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
