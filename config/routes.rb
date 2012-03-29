@@ -1,4 +1,5 @@
 SampleApp::Application.routes.draw do
+  resources :users
   get "users/new"
 
   #get "pages/home" #automatically maps the URL pages/home to the action home in the Pages controller
