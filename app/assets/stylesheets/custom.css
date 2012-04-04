@@ -3,7 +3,7 @@
 }
 
 body{
-	background: #264409;
+	background:#ffffff;
 }
 
 header{
@@ -23,7 +23,7 @@ footer{
 	margin-left: auto;
 }
 footer nav{
-	float: none;
+	float: right ;
 }
 section {
 	margin-top: 1em;
@@ -52,6 +52,7 @@ a:visited {
 }
 
 /*Navigation */
+
 nav{
 	float: right;
 }
@@ -86,7 +87,7 @@ nav ul li a:hover{
 	
 }
 
-a.signup_button{
+.signup_button{
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
@@ -141,3 +142,73 @@ div.field, div.actions{
 	.users li{
 		list-style:none;
 	}
+
+#sign_in{
+	float:right;
+}
+/**
+a{
+	display:block;
+	height:110px;
+	width:283px;
+	background:url('/assets/img/nf-logo.gif') no-repeat
+}
+#logo a:hover
+{background-position:bottom
+}**/
+#main_nav{
+	margin-left:10px;
+	position:absolute;
+	right:10px}
+#main_nav ul{
+	display:block;
+	margin:20px 0 0 0;
+	padding:0}
+#main_nav li{
+	display:inline;
+	margin:0;
+	padding:0;
+	text-indent: -9999px}
+#main_nav li.last
+a{
+	margin:0;
+	border:0
+ }
+	
+#main_nav li a{
+	display:block;
+	float:left;
+	background-image:url('nav.png');
+	background-repeat:no-repeat;
+	height:84px
+	}
+	
+#main_nav li#overview
+a{width:147px;background-position:0 0}
+#main_nav li#phases
+a{width:136px;background-position: -147px 0}
+#main_nav li#people
+a{width:196px;background-position: -283px 0}
+#main_nav li#meetings
+a{width:77px;background-position: -479px 0}
+#main_nav li#tasks
+a{width:77px;background-position: -479px 0}
+#main_nav li#policies
+a{width:77px;background-position: -479px 0}
+#main_nav li#help
+a{width:77px;background-position: -479px 0}
+
+#main_nav li#overview a:hover, #nav li#overview
+a.active{background-position:0 -84px}
+#main_nav li#phases a:hover, #nav li#phases
+a.active{background-position: -147px -84px}
+#main_nav li#people a:hover, #nav li#people
+a.active{background-position: -283px -84px}
+#main_nav li#meetings a:hover, #nav li#meetings
+a.active{background-position: -479px -84px}
+#main_nav li#tasks a:hover, #nav li#tasks
+a.active{background-position: -479px -84px}
+#main_nav li#policies a:hover, #nav li#policies
+a.active{background-position: -479px -84px}
+#main_nav li#help a:hover, #nav li#help
+a.active{background-position: -479px -84px}

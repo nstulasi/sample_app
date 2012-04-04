@@ -1,8 +1,26 @@
-<h1>Sample App</h1>
-<p>
-	This is the hom page
-	<%= link_to "Ror Tutorial", "http://railstutorial.org"%>
-	
-</p>
+<div class="grid_12" >
+Anyone can join and take advantage of what the Agenda Management Tool has to offer.  Signup now!!!
+</div>
 
-<%= link_to "Sign up now!", signup_path, :class => "signup_button round" %>
+<div class="grid_4">
+	<div id="sign_in">
+	<h1>Sign in!</h1>
+	<%= form_for(:session, :url => sessions_path) do |f|%>
+		
+	<div class="field">
+		<%=f.label :email %> <br/>
+		<%=f.text_field :email %>
+	</div>
+	
+	<div class="field">
+		<%=f.label :password %> <br/>
+		<%=f.password_field :password %>
+	</div>
+	
+	<div class="actions">
+	<%= f.submit "Sign in"%>
+	</div>
+	<%end%>
+<p> New user? <%= link_to "Sign up now!", signup_path%></p>
+</div>
+</div>

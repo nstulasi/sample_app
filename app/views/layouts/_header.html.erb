@@ -1,6 +1,10 @@
 	<header>
-		<%= link_to logo, root_path%> 
-		<nav class="round">
+		<div class="grid_16">
+		<div class="grid_4" >
+		<%= link_to logo, root_path%>
+		</div>
+		<div cass="grid_12">
+			<nav class="round" id="nav_bar" >
 			<ul>
 				<li><%= link_to "Home", root_path%></li>
 				<li><%= link_to "Profile", current_user%></li>
@@ -15,5 +19,10 @@
 				<li><%= link_to "Sign in", signin_path%></li>
 				<%end%>
 			</ul>
-		</nav>
-	</header>
+			</nav>
+			<%if current_user%>
+			<%= render 'layouts/nav_header'%>
+			<%end%>
+		<%=%>
+	</div>
+</header>
