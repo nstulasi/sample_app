@@ -6,4 +6,19 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+
+
+$(function (){
+	$('#task_due_date').datepicker();
+});
+
+/**$(function() {
+  $("#task_div th a, #tasks .pagination a").live("click", function() {
+    $.getScript(this.href);
+    return false;
+  });
+  $("#task_div_search input").keyup(function() {
+    $.get($("#task_div_search").attr("action"), $("#task_div_search").serialize(), null, "script");
+    return false;
+  });
+});	**/

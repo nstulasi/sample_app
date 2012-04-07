@@ -1,4 +1,8 @@
-<h1>Sign up!</h1>
+<div class="grid_4 layout">
+	<%= render 'users_sidemenu'%>
+</div>
+<div class ="grid_12 layout" id="right_display">
+	<h1>Sign up!</h1>
 <%= form_for(@user) do |f|%>
 <%= render 'shared/error_messages', :object => f.object%>	
 <div class="field">
@@ -21,3 +25,4 @@
 	<%= f.submit "Sign up"%>
 </div>
 <%end%>
+</div>

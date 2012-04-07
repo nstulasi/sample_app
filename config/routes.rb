@@ -1,9 +1,14 @@
 SampleApp::Application.routes.draw do
+  match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
+
+  resources :tasks
+
   get "sessions/new"
 
   resources :users
   resources :sessions, :only => [:new,:create,:destroy]
   
+  match "/tasks/index.js", :controller => 'tasks', :action => 'index', :format => :js
   get "users/new"
 
   #get "pages/home" #automatically maps the URL pages/home to the action home in the Pages controller

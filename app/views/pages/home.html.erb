@@ -1,14 +1,13 @@
-<div class="grid_12" >
-Anyone can join and take advantage of what the Agenda Management Tool has to offer.  Signup now!!!
+<div class="grid_16">
+<div class="grid_12 layout alpha" >
+	"Bleh"
 </div>
-
-<div class="grid_4">
-	<div id="sign_in">
-	<h1>Sign in!</h1>
+<div class="grid_4 omega layout" id="right_display" >
+	<h2>Sign in</h2>
 	<%= form_for(:session, :url => sessions_path) do |f|%>
 		
 	<div class="field">
-		<%=f.label :email %> <br/>
+		<%=f.label :email %><br/>
 		<%=f.text_field :email %>
 	</div>
 	
@@ -23,4 +22,4 @@ Anyone can join and take advantage of what the Agenda Management Tool has to off
 	<%end%>
 <p> New user? <%= link_to "Sign up now!", signup_path%></p>
 </div>
-</div>
+

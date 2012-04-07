@@ -1,0 +1,11 @@
+<div class="grid_4 layout">
+	<%= render 'tasks_sidemenu'%>
+</div>
+<div class ="grid_12 layout" id="right_display">
+<h1>Editing task</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', @task %> |
+<%= link_to 'Back', tasks_path %>
+</div>

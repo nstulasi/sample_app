@@ -3,7 +3,8 @@
 }
 
 body{
-	background:#ffffff;
+	background-image:url('backdrop.jpg');
+	background-repeat: repeat-x;
 }
 
 header{
@@ -100,7 +101,7 @@ nav ul li a:hover{
 	padding: 20px;
 }
 
-.round{
+.round, .layout{
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
@@ -143,26 +144,14 @@ div.field, div.actions{
 		list-style:none;
 	}
 
-#sign_in{
-	float:right;
-}
-/**
-a{
-	display:block;
-	height:110px;
-	width:283px;
-	background:url('/assets/img/nf-logo.gif') no-repeat
-}
-#logo a:hover
-{background-position:bottom
-}**/
+
+/** Main navigation bar**/
 #main_nav{
-	margin-left:10px;
-	position:absolute;
-	right:10px}
+	float:right;
+	margin-top:30px;}
 #main_nav ul{
 	display:block;
-	margin:20px 0 0 0;
+	margin: 0 0 0 0;
 	padding:0}
 #main_nav li{
 	display:inline;
@@ -178,25 +167,25 @@ a{
 #main_nav li a{
 	display:block;
 	float:left;
-	background-image:url('nav.png');
+	background-image:url('nav_copy.jpg');
 	background-repeat:no-repeat;
-	height:84px
+	height:50px;
 	}
 	
 #main_nav li#overview
-a{width:147px;background-position:0 0}
+a{width:109px;background-position:0 0}
 #main_nav li#phases
-a{width:136px;background-position: -147px 0}
+a{width:102px;background-position: -109px 0}
 #main_nav li#people
-a{width:196px;background-position: -283px 0}
+a{width:109px;background-position: -211px 0}
 #main_nav li#meetings
-a{width:77px;background-position: -479px 0}
+a{width:118px;background-position: -320px 0}
 #main_nav li#tasks
-a{width:77px;background-position: -479px 0}
+a{width:107px;background-position: -438px 0}
 #main_nav li#policies
-a{width:77px;background-position: -479px 0}
+a{width:114px;background-position: -545px 0}
 #main_nav li#help
-a{width:77px;background-position: -479px 0}
+a{width:114px;background-position: -659px 0}
 
 #main_nav li#overview a:hover, #nav li#overview
 a.active{background-position:0 -84px}
@@ -211,4 +200,42 @@ a.active{background-position: -479px -84px}
 #main_nav li#policies a:hover, #nav li#policies
 a.active{background-position: -479px -84px}
 #main_nav li#help a:hover, #nav li#help
-a.active{background-position: -479px -84px}
+a.active{background-position: -479px -84px;
+}
+
+/** Other layout related**/
+.layout{
+	background:#ffffff;
+	outline:thin;
+	outline-color:#000000;
+	outline-style:solid;
+}
+
+.separation{
+	background:#C6D880;
+	height:10px;
+}
+
+#right_display{
+	float:right;
+}
+/**Text**/
+.headings{
+	text-align:center;
+	margin-top: 10px;	
+}
+
+/** Tables**/
+.pretty th .current {
+  padding-right: 12px;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.pretty th .asc {
+  background-image: url('arrow_up.png');
+}
+
+.pretty th .desc {
+  background-image: url('arrow_down.png');
+}

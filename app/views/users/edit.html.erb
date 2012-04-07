@@ -1,3 +1,7 @@
+<div class="grid_4 layout">
+	<%= render 'users_sidemenu'%>
+</div>
+<div class ="grid_12 layout" id="right_display">
 <h1>Edit user </h1>
 <%= form_for(@user) do |f|%>
 <%= render 'shared/error_messages', :object => f.object %>
@@ -24,4 +28,5 @@
 <div>
 	<%= gravatar_for @user %>
 	<a href="http://gravatar.com/emails">change</a>
+</div>
 </div>
