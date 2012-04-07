@@ -9,7 +9,8 @@
 
 
 $(function (){
-	$('#task_due_date').datepicker();
+	$('#task_start_at').datepicker();
+	$('#task_end_at').datepicker();
 });
 
 /**$(function() {
@@ -21,4 +22,4 @@ $(function (){
     $.get($("#task_div_search").attr("action"), $("#task_div_search").serialize(), null, "script");
     return false;
   });
-});	**/
+});**/

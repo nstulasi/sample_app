@@ -11,9 +11,9 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120407153622) do
+ActiveRecord::Schema.define(:version => 20120407204211) do
 
-  create_table "events", :force => true do |t|
+  create_table "articles", :force => true do |t|
     t.string   "name"
     t.datetime "start_at"
     t.datetime "end_at"
@@ -26,9 +26,10 @@ ActiveRecord::Schema.define(:version => 20120407153622) do
     t.string   "name"
     t.string   "status"
     t.string   "priority"
-    t.date     "due_date"
+    t.date     "end_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "start_at"
   end
 
   create_table "users", :force => true do |t|

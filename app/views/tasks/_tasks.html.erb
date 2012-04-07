@@ -1,12 +1,13 @@
 <%= hidden_field_tag :direction, params[:direction] %>
 <%= hidden_field_tag :sort, params[:sort] %>
-<%= will_paginate @products %>
+<%= will_paginate @tasks %>
 <table class="pretty">
   <tr>
     <th><%= sortable "name"%></th>
     <th><%= sortable "status"%></th>
     <th><%= sortable "priority"%></th>
-    <th><%= sortable "due_date"%></th>
+    <th><%= sortable "start_at"%></th>
+    <th><%= sortable "end_at"%></th>
     <th></th>
     <th></th>
     <th></th>
@@ -17,7 +18,8 @@
     <td><%= task.name %></td>
     <td><%= task.status %></td>
     <td><%= task.priority %></td>
-    <td><%= task.due_date %></td>
+    <td><%= task.start_at %></td>
+    <td><%= task.end_at %></td>
     <td><%= link_to 'Show', task %></td>
     <td><%= link_to 'Edit', edit_task_path(task) %></td>
     <td><%= link_to 'Destroy', task, confirm: 'Are you sure?', method: :delete %></td>

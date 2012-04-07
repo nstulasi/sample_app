@@ -25,11 +25,14 @@
 </p>
 
 <p>
-  <b>Due date:</b>
-  <%= @task.due_date %>
+  <b>Start Date:</b>
+  <%= @task.start_at %>
 </p>
 
-
+<p>
+  <b>End Date:</b>
+  <%= @task.end_at %>
+</p>
 <%= link_to 'Edit', edit_task_path(@task) %> |
 <%= link_to 'Back', tasks_path %>
 </div>

@@ -1,6 +1,9 @@
 SampleApp::Application.routes.draw do
-  match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
+  
+  match '/articles(/:year(/:month))' => 'articles#index', :as => :articles, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
 
+  match '/tasks/calendar(/:year(/:month))' => 'tasks#view_calendar', :as => :tasks, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
+  
   resources :tasks
 
   get "sessions/new"

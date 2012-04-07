@@ -7,9 +7,19 @@ class TasksController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @tasks }
-    end
+    end   
   end
 
+def view_calendar
+   
+    @month = (params[:month] || (Time.zone || Time).now.month).to_i
+    @year = (params[:year] || (Time.zone || Time).now.year).to_i
+
+    @shown_month = Date.civil(@year, @month)
+
+    @event_strips = Task.event_strips_for_month(@shown_month)
+
+end
   # GET /tasks/1
   # GET /tasks/1.json
   def show
