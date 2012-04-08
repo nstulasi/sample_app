@@ -14,6 +14,9 @@ gem 'will_paginate','3.0.pre2'
 gem 'pg'
 gem 'formtastic'
 gem 'event-calendar', :require => 'event_calendar'
+gem 'meta_search'
+gem 'simple_datatables'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

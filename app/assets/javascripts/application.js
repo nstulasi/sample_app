@@ -6,11 +6,14 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require simple_datatables
 
 
 $(function (){
-	$('#task_start_at').datepicker();
-	$('#task_end_at').datepicker();
+	$('#task_start_at').datepicker({dateFormat: 'yy-mm-dd'});
+	$('#task_end_at').datepicker({dateFormat: 'yy-mm-dd'});
+	$('#event_start_at').datepicker({dateFormat: 'yy-mm-dd'});
+	$('#event_end_at').datepicker({dateFormat: 'yy-mm-dd'});
 });
 
 /**$(function() {
@@ -23,3 +26,22 @@ $(function (){
     return false;
   });
 });**/
+
+
+
+$(document).ready(function(){
+	$('#example').dataTable();
+});
+
+$(document).ready(function(){$('.toggle:not(.toggle-open)') .addClass('toggle-closed') .parents('li') .children('ul') .hide();    
+
+$('.toggle') .click(function(){
+   if ($(this) .hasClass('toggle-open')) {
+     $(this) .removeClass('toggle-open') .addClass('toggle-closed') .empty('') .append('+') .parents('li') .children('ul') .slideUp(250);
+     $(this) .parent('.menutop') .removeClass('menutop-open') .addClass('menutop-closed');
+   }else{
+     $(this) .parent('.menutop') .removeClass('menutop-closed') .addClass('menutop-open');
+     $(this) .removeClass('toggle-closed') .addClass('toggle-open') .empty('') .append('&ndash;') .parents('li') .children('ul') .slideDown(250);
+ }
+ })
+ });

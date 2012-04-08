@@ -1,8 +1,14 @@
 SampleApp::Application.routes.draw do
   
+  resources :policies
+
+  resources :events
+
   match '/articles(/:year(/:month))' => 'articles#index', :as => :articles, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
 
-  match '/tasks/calendar(/:year(/:month))' => 'tasks#view_calendar', :as => :tasks, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
+  match '/events(/:year(/:month))' => 'events#index', :as => :articles, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
+
+  match '/tasks/calendar(/:year(/:month))' => 'tasks#view_calendar', :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
   
   resources :tasks
 
